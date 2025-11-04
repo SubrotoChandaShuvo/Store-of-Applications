@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://i.pinimg.com/736x/c8/7f/78/c87f7800825a4fea32ad5a8ecc141053.jpg",
+    "title": "PhotoMaster",
+    "companyName": "PixelCraft Studios",
+    "id": 1,
+    "description": "An advanced photo editor with AI-powered background removal and filters.",
+    "size": 85,
+    "reviews": 2300,
+    "ratingAvg": 4.6,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 210 },
+      { "name": "4 star", "count": 620 },
+      { "name": "5 star", "count": 1270 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/1200x/40/76/fc/4076fcfe75ac91635549cda45a12fe6a.jpg",
+    "title": "Taskify",
+    "companyName": "BrightApps Co.",
+    "id": 2,
+    "description": "A productivity app to manage your tasks, goals, and deadlines effectively.",
+    "size": 42,
+    "reviews": 890,
+    "ratingAvg": 4.3,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 270 },
+      { "name": "5 star", "count": 410 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/736x/6c/2e/94/6c2e940585651feb5d051a545093a806.jpg",
+    "title": "FitTrack",
+    "companyName": "HealthHub Labs",
+    "id": 3,
+    "description": "Track workouts, calories, and daily goals with detailed analytics.",
+    "size": 60,
+    "reviews": 5100,
+    "ratingAvg": 4.8,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 320 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 3540 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/1200x/97/cc/8c/97cc8c5b40c3a84a6a9a70c8736d3d93.jpg",
+    "title": "NoteNest",
+    "companyName": "MindFlow Technologies",
+    "id": 4,
+    "description": "Organize notes, thoughts, and ideas in one clean and minimal interface.",
+    "size": 25,
+    "reviews": 1250,
+    "ratingAvg": 4.4,
+    "downloads": 420000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 360 },
+      { "name": "5 star", "count": 580 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/736x/5a/83/f3/5a83f3d6c1dfbfcf31554101b4ad7f8a.jpg",
+    "title": "MusicStream",
+    "companyName": "Harmony Inc.",
+    "id": 5,
+    "description": "Stream your favorite songs, create playlists, and discover new artists daily.",
+    "size": 95,
+    "reviews": 6400,
+    "ratingAvg": 4.5,
+    "downloads": 2100000,
+    "ratings": [
+      { "name": "1 star", "count": 310 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 470 },
+      { "name": "4 star", "count": 1300 },
+      { "name": "5 star", "count": 4120 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/1200x/50/cd/df/50cddf4bdc92b0063f7bc061843f94b9.jpg",
+    "title": "TravelGo",
+    "companyName": "Wanderlust Apps",
+    "id": 6,
+    "description": "Plan trips, book hotels, and explore attractions worldwide effortlessly.",
+    "size": 70,
+    "reviews": 2750,
+    "ratingAvg": 4.2,
+    "downloads": 950000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 820 },
+      { "name": "5 star", "count": 1270 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/1200x/f1/72/a7/f172a7266dd560bcef404de6faf6dae6.jpg",
+    "title": "BudgetPal",
+    "companyName": "FinWise Solutions",
+    "id": 7,
+    "description": "Track expenses, set budgets, and visualize your financial habits easily.",
+    "size": 33,
+    "reviews": 1580,
+    "ratingAvg": 4.1,
+    "downloads": 640000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 310 },
+      { "name": "4 star", "count": 490 },
+      { "name": "5 star", "count": 570 }
+    ]
+  },
+  {
+    "image": "https://i.pinimg.com/736x/82/fc/56/82fc56b8c33ef9a744630675ef6a209f.jpg",
+    "title": "LearnLang",
+    "companyName": "EduWave Ltd.",
+    "id": 8,
+    "description": "An interactive language learning app with gamified lessons and challenges.",
+    "size": 58,
+    "reviews": 3800,
+    "ratingAvg": 4.7,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 160 },
+      { "name": "2 star", "count": 110 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 720 },
+      { "name": "5 star", "count": 2560 }
+    ]
+  }
+]
