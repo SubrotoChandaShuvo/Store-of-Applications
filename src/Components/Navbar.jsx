@@ -80,7 +80,7 @@ const Navbar = () => {
           </li>
           <li className="bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
             <NavLink
-              to="/apps"
+              to="/AllApps"
               className={({ isActive }) =>
                 isActive ? "text-[#e39b2e] underline underline-offset-4" : ""
               }
