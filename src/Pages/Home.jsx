@@ -1,12 +1,12 @@
 import React from "react";
-import { Link, useLoaderData } from "react-router";
 import Apps from "./Apps";
 import useApps from "../hooks/useApps";
+import { Link } from "react-router";
 // import AllApps from "./AllApps";
 
 const Home = () => {
   //   const appData = useLoaderData();
-  const { apps, loading, error } = useApps();
+  const { apps } = useApps();
 
   const trendingApps = apps.slice(0, 8);
   // console.log(appData);

@@ -1,9 +1,11 @@
 import React from "react";
+import { Link, Links } from "react-router";
 
 const Apps = ({ app }) => {
-  const { title, ratingAvg, downloads, image } = app;
+  const { title, ratingAvg, downloads, image, id } = app;
   return (
-    <div className="card p-4 shadow-2xl bg-[#ffffff] h-[335px] hover:scale-105 transition ">
+    <Link to={`/AllApps/${id}`}>
+    <div className="card p-4 shadow-2xl bg-[#ffffff] h-[335px] hover:scale-105 transition">
       <figure className="h-[316px] overflow-hidden">
         <img className="w-full object-cover" src={image} alt={title} />
       </figure>
@@ -22,6 +24,7 @@ const Apps = ({ app }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
