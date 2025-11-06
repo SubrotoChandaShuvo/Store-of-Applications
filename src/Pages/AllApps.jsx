@@ -14,13 +14,12 @@ const AllApps = () => {
     ? apps.filter((app) => app.title.toLocaleLowerCase().includes(term))
     : apps;
 
-      if (loading) return <LoadingSpinner/>;
-      if(error) return <AppNotFound/>
+  if (loading) return <LoadingSpinner />;
+  if (error) return <AppNotFound />;
   // console.log(searchApps);
 
   return (
     <div className="bg-[#F1F5E8]">
-      
       {
         <div className="p-5 md:p-10 lg:p-20">
           <div className="p-10">
@@ -48,8 +47,16 @@ const AllApps = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-              {
+              {loading ? (
+                <LoadingSpinner />
+              ) : error ? (
+                <AppNotFound />
+              ) : searchApps.length?
+              (
                 searchApps.map((app) => <Apps app={app} key={app.id}></Apps>)
+              ):
+              <AppNotFound/>
+
               }
             </div>
           </div>
