@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import InstallDesign from "./InstallDesign";
+import { loadInstalled, uninstall } from "../utils/localStorage";
 // import { redirectDocument } from "react-router";
 
 const Installations = () => {
   const [sortOrder, setSortOrder] = useState("none");
-  const [install, setInstall] = useState([]);
-  useEffect(() => {
-    const installedList = JSON.parse(localStorage.getItem("installed"));
-    if (installedList) setInstall(installedList);
-  }, []);
+  const [install, setInstall] = useState(()=>loadInstalled());
 
   const sortedItem = (() => {
     if (sortOrder === "asc") {
@@ -22,12 +19,12 @@ const Installations = () => {
 
 
   const handleUninstall = (id) => {
-    const existingList = JSON.parse(localStorage.getItem("installed"));
-    let updatedList = existingList.filter((a) => a.id !== id);
+    // const existingList = JSON.parse(localStorage.getItem("installed"));
+    // let updatedList = existingList.filter((a) => a.id !== id);
 
+    uninstall(id);
     // for UI instant update
-    setInstall(updatedList)
-    localStorage.setItem("installed", JSON.stringify(updatedList));
+    setInstall(prev=>prev.filter(a=>a.id!==id))
   };
 
   return (
