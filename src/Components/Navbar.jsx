@@ -60,7 +60,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl ">
-          <img src="/assets/logo.png" className="h-7 w-7"></img>
+          <img src="/src/assets/logo.png" className="h-7 w-7"></img>
           <span className="bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
             HERO.IO
           </span>
@@ -107,7 +107,7 @@ const Navbar = () => {
           className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white"
         >
           <img
-            src="/assets/github.png"
+            src="/src/assets/github.png"
             className="h-5 w-5 bg-white rounded-4xl"
           ></img>{" "}
           Contribute

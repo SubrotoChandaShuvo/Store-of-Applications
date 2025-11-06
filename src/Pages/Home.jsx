@@ -42,16 +42,16 @@ const Home = () => {
           </div>
           <div className="flex gap-4 m-10 justify-center">
             <a href="https://play.google.com/store" className="flex gap-1 border border-[#D2D2D2] px-6 py-3 rounded-sm w-[180px] shadow">
-              <img src="/assets/Play Store.jpeg" alt="" className="w-9 h-7" />
+              <img src="/src/assets/Play Store.jpeg" alt="" className="w-9 h-7" />
               Google Play
             </a>
             <a href="https://apple.com/app-store/" className="flex gap-1 border border-[#D2D2D2] px-6 py-3 rounded-sm w-[180px] justify-center shadow">
-              <img src="/assets/App Store.jpeg" alt="" className="w-6 h-6" />{" "}
+              <img src="/src/assets/App Store.jpeg" alt="" className="w-6 h-6" />{" "}
               App Store
             </a>
           </div>
           <div>
-            <img src="/assets/hero.png" alt="" className="mx-auto" />
+            <img src="/src/assets/hero.png" alt="" className="mx-auto" />
           </div>
         </div>
       }

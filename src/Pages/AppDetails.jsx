@@ -75,7 +75,7 @@ const AppDetails = () => {
               <div className="pt-7.5 flex gap-8 pb-7.5">
                 <div className="">
                   <img
-                    src="/assets/icon-downloads.png"
+                    src="/src/assets/icon-downloads.png"
                     alt=""
                     className="w-10 h-10"
                   />
@@ -84,7 +84,7 @@ const AppDetails = () => {
                 </div>
                 <div className="">
                   <img
-                    src="/assets/icon-ratings.png"
+                    src="/src/assets/icon-ratings.png"
                     alt=""
                     className="w-10 h-10"
                   />
@@ -93,7 +93,7 @@ const AppDetails = () => {
                 </div>
                 <div className="">
                   <img
-                    src="/assets/icon-review.png"
+                    src="/src/assets/icon-review.png"
                     alt=""
                     className="w-10 h-10"
                   />
