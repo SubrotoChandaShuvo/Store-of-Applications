@@ -2,22 +2,25 @@ import React, { useState } from "react";
 import useApps from "../hooks/useApps";
 import { Link } from "react-router";
 import Apps from "./Apps";
+import AppNotFound from "./AppNotFound";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 const AllApps = () => {
-  const { apps } = useApps();
+  const { apps, loading, error } = useApps();
   const [search, setSearch] = useState("");
 
   const term = search.trim().toLocaleLowerCase();
   const searchApps = term
-    ? apps.filter((app) => 
-        app.title.toLocaleLowerCase().includes(term))
+    ? apps.filter((app) => app.title.toLocaleLowerCase().includes(term))
     : apps;
 
-    // console.log(searchApps);
-    
+      if (loading) return <LoadingSpinner/>;
+      if(error) return <AppNotFound/>
+  // console.log(searchApps);
 
   return (
     <div className="bg-[#F1F5E8]">
+      
       {
         <div className="p-5 md:p-10 lg:p-20">
           <div className="p-10">
@@ -45,9 +48,9 @@ const AllApps = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-              {searchApps.map((app) => (
-                <Apps app={app} key={app.id}></Apps>
-              ))}
+              {
+                searchApps.map((app) => <Apps app={app} key={app.id}></Apps>)
+              }
             </div>
           </div>
         </div>

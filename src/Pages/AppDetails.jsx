@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useApps from "../hooks/useApps";
 import {
@@ -12,15 +12,32 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { updateList } from "../utils/localStorage";
+import { loadInstalled, updateList } from "../utils/localStorage";
+import { Bounce } from "react-toastify";
+import LoadingSpinner from "../Components/LoadingSpinner";
+import ErrorPage from "./ErrorPage";
+import AppNotFound from "./AppNotFound";
 
 const AppDetails = () => {
   const { id } = useParams();
-  const { apps, loading } = useApps();
+  const { apps, loading , error} = useApps();
+  const [disabled, setDisabled] = useState(false);
+  const have = loadInstalled();
+  useEffect(() => {
+    const app = have.find((a) => String(a.id) === id);
+    if (app) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  }, [have, loading]);
 
   const app = apps.find((a) => String(a.id) === id);
-  if (loading) return <p>Loading......</p>;
-  //   console.log(app);
+
+
+  if (loading) return <LoadingSpinner/>;
+  if (error) return <ErrorPage/>
+  if (!app) return <AppNotFound/>
 
   const {
     title,
@@ -33,23 +50,6 @@ const AppDetails = () => {
     description,
     ratings,
   } = app || {};
-
-//   const handleAddToInstallation = () => {
-//     const existingList = JSON.parse(localStorage.getItem("installed"));
-//     let updatedList = [];
-
-//     if (existingList) {
-//       const isDuplicate = existingList.some((p) => p.id === app.id);
-//       if (isDuplicate) {
-//         return alert("this app is already Installed");
-//       }
-//       updatedList = [...existingList, app];
-//     } else {
-//       updatedList.push(app);
-//     }
-//     localStorage.setItem("installed", JSON.stringify(updatedList));
-//     // console.log(app);
-//   };
 
   return (
     <div className="bg-[#F1F5E8]">
@@ -101,15 +101,16 @@ const AppDetails = () => {
                   <h2 className="font-extrabold text-[40px]">{reviews}</h2>
                 </div>
               </div>
-              {/* <button
-                className="bg-[#00D390] px-5 py-3 rounded-sm "
-                onClick={handleAddToInstallation}
-              > */}
               <button
-                className="bg-[#00D390] px-5 py-3 rounded-sm "
-                onClick={()=>updateList(app)}
+                onClick={() => {
+                  updateList(app);
+                  setDisabled(true);
+                }}
+                className={` px-5 py-3 rounded-sm ${
+                  disabled ? "bg-gray-400" : "bg-[#00D390]"
+                } hover:bg-gray-400 `}
               >
-                Install Now ({size} MB)
+                {disabled ? "Installed " : `Install Now (${size} MB)`}
               </button>
             </div>
           </div>
@@ -125,20 +126,16 @@ const AppDetails = () => {
                   layout="vertical"
                   margin={{ top: 20, right: 30, left: 40, bottom: 5 }}
                 >
-                  <XAxis
-                    type="number"
-                    axisLine={false} 
-                    tickLine={false}
-                  />
+                  <XAxis type="number" axisLine={false} tickLine={false} />
                   <YAxis
                     dataKey="name"
                     type="category"
                     reversed
-                    axisLine={false} 
+                    axisLine={false}
                     tickLine={false}
                   />
                   <Tooltip />
-                 
+
                   <Bar
                     dataKey="count"
                     fill="#FF8811"

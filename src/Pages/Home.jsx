@@ -2,16 +2,23 @@ import React from "react";
 import Apps from "./Apps";
 import useApps from "../hooks/useApps";
 import { Link } from "react-router";
+import { Bounce } from "react-toastify";
+import LoadingSpinner from "../Components/LoadingSpinner";
+import ErrorPage from "./ErrorPage";
 // import AllApps from "./AllApps";
 
 const Home = () => {
   //   const appData = useLoaderData();
-  const { apps } = useApps();
+  const { apps , loading, error} = useApps();
+
+  if (loading) return <LoadingSpinner/>;
+  if (error) return <ErrorPage/>
 
   const trendingApps = apps.slice(0, 8);
   // console.log(appData);
   return (
     <div className="bg-[#F1F5E8]">
+     
       {
         <div className="px-20 pt-20">
           <div>

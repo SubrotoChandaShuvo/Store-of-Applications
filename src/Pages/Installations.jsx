@@ -1,6 +1,7 @@
 import React, {  useState } from "react";
 import InstallDesign from "./InstallDesign";
 import { loadInstalled, uninstall } from "../utils/localStorage";
+import { toast } from "react-toastify";
 // import { redirectDocument } from "react-router";
 
 const Installations = () => {
@@ -25,10 +26,11 @@ const Installations = () => {
     uninstall(id);
     // for UI instant update
     setInstall(prev=>prev.filter(a=>a.id!==id))
+    toast.success("App Uninstalled Successfully!");
   };
 
   return (
-    <div className="bg-[#F1F5E8] p-20">
+    <div className="bg-[#F1F5E8] p-20 min-h-screen">
       {
         <div>
           <div className="">
