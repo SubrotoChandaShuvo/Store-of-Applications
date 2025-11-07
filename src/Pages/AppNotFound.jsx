@@ -1,9 +1,10 @@
 import React from 'react';
+import appError from "../assets/App-Error.png";
 
 const AppNotFound = () => {
     return (
         <div className='p-20'>
-            <img src="/assets/App-Error.png" alt=""  className=''/>
+            <img src={appError} alt=""  className=''/>
         </div> 
     );
 };
