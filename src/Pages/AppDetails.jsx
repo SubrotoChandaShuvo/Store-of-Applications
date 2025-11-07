@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useApps from "../hooks/useApps";
+import downloadIcon from "../assets/icon-downloads.png";
+import ratingIcon from "../assets/icon-ratings.png";
 import {
   BarChart,
   Bar,
@@ -17,6 +19,7 @@ import { Bounce } from "react-toastify";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import ErrorPage from "./ErrorPage";
 import AppNotFound from "./AppNotFound";
+import reviewIcon from "../assets/icon-review.png";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -75,7 +78,7 @@ const AppDetails = () => {
               <div className="pt-7.5 flex gap-8 pb-7.5">
                 <div className="">
                   <img
-                    src="/src/assets/icon-downloads.png"
+                    src={downloadIcon}
                     alt=""
                     className="w-10 h-10"
                   />
@@ -84,7 +87,7 @@ const AppDetails = () => {
                 </div>
                 <div className="">
                   <img
-                    src="/src/assets/icon-ratings.png"
+                    src={ratingIcon}
                     alt=""
                     className="w-10 h-10"
                   />
@@ -93,7 +96,7 @@ const AppDetails = () => {
                 </div>
                 <div className="">
                   <img
-                    src="/src/assets/icon-review.png"
+                    src={reviewIcon}
                     alt=""
                     className="w-10 h-10"
                   />
