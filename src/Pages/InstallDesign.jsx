@@ -1,4 +1,7 @@
 import React from "react";
+import downloadIcon from "../assets/icon-downloads.png";
+import ratingIcon from "../assets/icon-ratings.png"
+
 
 const InstallDesign = ({ p , handleUninstall}) => {
   //  p= JSON.parse(p);
@@ -17,7 +20,7 @@ const InstallDesign = ({ p , handleUninstall}) => {
                 <div className="flex gap-4 bt-4">
                   <div className="flex gap-1 items-center">
                     <img
-                      src="/assets/icon-downloads.png"
+                      src={downloadIcon}
                       alt=""
                       className="w-4 h-4"
                     />
@@ -25,7 +28,7 @@ const InstallDesign = ({ p , handleUninstall}) => {
                   </div>
                   <div className="flex gap-1 items-center">
                     <img
-                      src="/assets/icon-ratings.png"
+                      src={ratingIcon}
                       alt=""
                       className="w-4 h-4"
                     />
